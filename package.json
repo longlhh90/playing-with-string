@@ -1,0 +1,15 @@
+{
+    "name": "test-7shifts",
+    "version": "1.0.0",
+    "description": "test 7shifts",
+    "main": "main.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "lukas le",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "jest": "^27.0.6"
+    }
+}
