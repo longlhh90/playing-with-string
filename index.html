@@ -1,0 +1,16 @@
+<header>
+    <script src="main.js"></script>
+    <script>
+        function show_result() {
+            var inputVal = document.getElementById("myInput").value;
+            alert(`The result is: ${simple_string_calculation(inputVal.replace(/\\n/g, '\n').trim())}`);
+            document.getElementById("myInput").value = null;
+        }
+    </script>
+</header>
+
+<body>
+    <p>Hello! Please enter the string you want to calculate. Ex: '1,2,3,4' or '//@\n1@2@3@4' </p>
+    String number: <input type="text" id="myInput" placeholder="1,2,3,4">
+    <input type="button" onclick="show_result()" value="Display">
+</body>
