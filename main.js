@@ -14,6 +14,9 @@ function simple_string_calculation(string) {
 
         return list_numbers.reduce((accumulator, currentValue) => {
             const v = parseInt(currentValue);
+            if (Number.isNaN(v)) {
+                throw new Error(`Please re-check your input string. Make sure the format is  '1,2,3,4' or ${JSON.stringify('//[delimiter]\n[delimiter separated numbers]')}`);
+            }
             return accumulator + (v > 1000 ? 0 : v);
         }, 0);
     } catch (err) {
