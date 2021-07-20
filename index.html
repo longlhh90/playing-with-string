@@ -3,7 +3,12 @@
     <script>
         function show_result() {
             var inputVal = document.getElementById("myInput").value;
-            alert(`The result is: ${simple_string_calculation(inputVal.replace(/\\n/g, '\n').trim())}`);
+            try {
+                result = `The result is: ${simple_string_calculation(inputVal.replace(/\\n/g, '\n').trim())}`;
+            } catch (err) {
+                result = `Error: ${err.message}`;
+            }
+            alert(result);
             document.getElementById("myInput").value = null;
         }
     </script>
